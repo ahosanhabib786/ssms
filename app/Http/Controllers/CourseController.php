@@ -35,16 +35,27 @@ class CourseController extends Controller
 
     public function edit($id)
     {
-        return view('teacher.course.edit');
+        $this->course = Course::find($id);
+        return view('teacher.course.edit',['course' => $this->course]);
     }
     public function update(Request $request, $id)
     {
-        return $request->all();
+        Course::updateCourseStatus($request, $id);
+        return redirect('/course/manage')->with('message','Data update successfully');
     }
-
     public function delete($id)
     {
-        return $id;
+        $this->course=Course::find($id);
+        $this->course->delete();
+        return redirect('/course/manage')->with('message','Data deleted successfully');
     }
+
+
+//    public function delete($id)
+//    {
+//        $this->course =Course::deleteData($id);
+//        return redirect('/course/manage')->with('message','Data Save successfully');
+//
+// }
 
 }

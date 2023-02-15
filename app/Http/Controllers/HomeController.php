@@ -11,7 +11,7 @@ class HomeController extends Controller
 
     public function sendMail()
     {
-        
+
     }
 
     public function index()
@@ -29,7 +29,8 @@ class HomeController extends Controller
 
     public function courses()
     {
-        return view('website.courses.index');
+        $course=Course::all();
+        return view('website.courses.index',['courses'=>$course]);
     }
 
     public function detail($id)

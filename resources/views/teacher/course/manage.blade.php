@@ -34,6 +34,11 @@
                                     <a href="{{route('course.edit', ['id' => $course->id])}}" class="btn btn-success btn-sm" title="Edit Course">
                                         <i class="fa fa-edit"></i>
                                     </a>
+{{--                                    <form action="{{route('delete',['id'=>$data->id])}}" class="d-flex">--}}
+{{--                                        @csrf--}}
+{{--                                        <input type="hidden" name="data_id" value="{{$data->id}}">--}}
+{{--                                        <input type="submit" value="delete" class="btn btn-danger" onclick="return confirm('Are you sure to delete this.')">--}}
+{{--                                    </form>--}}
                                     <a href="{{route('course.delete', ['id' => $course->id])}}" class="btn btn-danger btn-sm" title="Delete Course">
                                         <i class="fa fa-trash"></i>
                                     </a>

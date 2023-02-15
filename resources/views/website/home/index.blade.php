@@ -41,9 +41,22 @@
                         <img src="{{asset('/website/img/service_img1.jpg')}}" alt="" class="card-img-top">
                         <div class="card-body">
                             <h3>Responsive Web Design</h3>
-                            <h5>MD. Pplash Mia</h5>
+                            <h5></h5>
                             <p>Tk. 12000</p>
-                            <p>Starting Date: 12.09.2022</p>
+                            <p>Starting Date: 12.09.2023</p>
+                            <hr/>
+                            <a href="" class="btn btn-outline-success px-5">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="{{asset('/website/img/1.jpg')}}" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h3>Post graduate Diploma</h3>
+                            <h5></h5>
+                            <p>Tk. 12000</p>
+                            <p>Starting Date: 12.09.2023</p>
                             <hr/>
                             <a href="" class="btn btn-outline-success px-5">Read More</a>
                         </div>
@@ -54,22 +67,9 @@
                         <img src="{{asset('/website/img/service_img1.jpg')}}" alt="" class="card-img-top">
                         <div class="card-body">
                             <h3>Responsive Web Design</h3>
-                            <h5>MD. Pplash Mia</h5>
+                            <h5></h5>
                             <p>Tk. 12000</p>
-                            <p>Starting Date: 12.09.2022</p>
-                            <hr/>
-                            <a href="" class="btn btn-outline-success px-5">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <img src="{{asset('/website/img/service_img1.jpg')}}" alt="" class="card-img-top">
-                        <div class="card-body">
-                            <h3>Responsive Web Design</h3>
-                            <h5>MD. Pplash Mia</h5>
-                            <p>Tk. 12000</p>
-                            <p>Starting Date: 12.09.2022</p>
+                            <p>Starting Date: 12.09.2023</p>
                             <hr/>
                             <a href="" class="btn btn-outline-success px-5">Read More</a>
                         </div>

@@ -33,19 +33,36 @@ class Course extends Model
     }
 
 
-    public static function updateCourseStatus($id)
+    public static function updateCourseStatus($request,$id)
     {
         self::$course = Course::find($id);
-        if (self::$course->status == 0)
-        {
-            self::$course->status = 1;
-            self::$message = "Course status info published successfully.";
+        self::$course->teacher_id       = Session::get('teacher_id');
+        self::$course->title            = $request->title;
+        self::$course->fee              = $request->fee;
+        self::$course->starting_date    = $request->starting_date;
+        self::$course->duration         = $request->duration;
+        if($request->file('image')){
+            if(file_exists(self::$course->image)){
+                unlink(self::$course->image);
+            }
+            self::$imageUrl=self::getImageUrl($request,'upload/course-offer-images/');
         }
-        else
-        {
-            self::$course->status = 0;
-            self::$message = "Course status info unpublished successfully.";
+        else{
+            self::$imageUrl=self::$course->image;
         }
+        self::$course->image            = self::$imageUrl;
+        self::$course->description      = $request->description;
+        self::$course->save();
+//        if (self::$course->status == 0)
+//        {
+//            self::$course->status = 1;
+//            self::$message = "Course status info published successfully.";
+//        }
+//        else
+//        {
+//            self::$course->status = 0;
+//            self::$message = "Course status info unpublished successfully.";
+//        }
         self::$course->save();
         return self::$message;
     }
@@ -78,6 +95,14 @@ class Course extends Model
         self::$course->banner_image = self::$imageUrl;
         self::$course->save();
     }
+//    public function deleteData($request)
+//    {
+//        self::$course= Course::find($request->data_id);
+//        if(file_exists(self::$course->image)){
+//            unlink(self::$course->image);
+//        }
+//        self::$course->delete();
+//    }
 
     public function teacher()
     {

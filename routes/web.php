@@ -27,9 +27,6 @@ use App\Http\Controllers\TeacherEnrollController;
 
 Route::get('/send-mail', [HomeController::class, 'sendmail']);
 
-
-
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 Route::get('/all-courses', [HomeController::class, 'courses'])->name('courses');
